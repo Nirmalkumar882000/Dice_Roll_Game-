@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Gamer";
+    src: url('/fonts/GAMERIA.ttf');
+}
+@font-face {
+    font-family: "Gamer1";
+    src: url('../src/assets/fonts/gamer1.otf');
+}
+
+@font-face {
+    font-family: "Gamer2";
+    src: url('../src//assets//fonts//Blockt.ttf'); 
+}
+@font-face {
+    font-family: "sigmaFive";
+    src: url('../src//assets//fonts/sigmafive.otf'); 
+}
+@font-face {
+    font-family: "angry";
+    src: url('../src/assets/fonts/angrybirds-regular.ttf'); 
+}
+@font-face {
+    font-family: "avengers";
+    src: url('../src/assets/fonts/avengers.ttf'); 
+}
+@font-face {
+    font-family: "Iomanoid";
+    src: url('../src/assets/fonts/Iomanoid.otf'); 
+}
+
+
+@layer utilities {
+    @variants responsive {
+     
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+
+      .no-scrollbar {
+          -ms-overflow-style: none; 
+          scrollbar-width: none; 
+      }
+    }
+  }
+
+
