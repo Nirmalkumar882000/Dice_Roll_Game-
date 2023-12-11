@@ -18,7 +18,7 @@ function App() {
         <div className="flex items-center justify-center mt-20">
           <Board/>
         </div>
-        <div className="mt-96">
+        <div className="mt-20">
           <Footer/>
         </div>
       </div>  

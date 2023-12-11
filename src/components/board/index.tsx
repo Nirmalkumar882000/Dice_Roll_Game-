@@ -1,6 +1,9 @@
-import React from "react";
+import React, { Suspense } from "react";
 import dice from "/dice/dice.png";
 import profile from "/dice/profile.gif";
+import { Canvas } from "@react-three/fiber";
+import { Environment, OrbitControls, RoundedBox } from "@react-three/drei";
+import { Character } from "./Charcter";
 
 
 function Board() {
@@ -25,11 +28,19 @@ function Board() {
             <p className="text-6xl italic font-extrabold text-white font-Iomanoid">8-12</p>
           </div>
         </div>
+      <div className="-mt-60 -mr-96">
+          <Canvas>
+            <ambientLight intensity={2}/>
+            <Environment preset="city"/>
+            <OrbitControls enableZoom={false} enablePan={false} maxPolarAngle={1.5} minPolarAngle={1.5}/>
+            <Suspense fallback={null}>
+              <Character/>
+            </Suspense>
+          </Canvas>
+        </div>
+
       </div>
       {/* profile */}
-      <div className="flex justify-end -mr-44 -mt-96">
-          <img className="w-10 h-10" src={profile} alt="profile" />
-        </div>
     </div>
   );
 }
