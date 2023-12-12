@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import manual from "/dice/manual.gif";
-import coin from "/dice/coin.jpg"
+import coin from "/dice/coin.png"
 import { Canvas } from "@react-three/fiber";
 import { Instruction } from "./Instruction";
 import { OrbitControls } from "@react-three/drei";

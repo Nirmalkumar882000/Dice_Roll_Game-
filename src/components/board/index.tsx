@@ -28,9 +28,10 @@ function Board() {
             <p className="text-6xl italic font-extrabold text-white font-Iomanoid">8-12</p>
           </div>
         </div>
+        {/* profile */}
       <div className="-mt-60 -mr-96">
           <Canvas>
-            <ambientLight intensity={2}/>
+            <ambientLight intensity={3}/>
             <Environment preset="city"/>
             <OrbitControls enableZoom={false} enablePan={false} maxPolarAngle={1.5} minPolarAngle={1.5}/>
             <Suspense fallback={null}>
@@ -40,7 +41,7 @@ function Board() {
         </div>
 
       </div>
-      {/* profile */}
+     
     </div>
   );
 }
