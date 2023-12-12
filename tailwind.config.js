@@ -15,7 +15,7 @@ export default {
     extend: {
       backgroundImage: {
         'main': "url('/background/bgs2.jpg')",
-        'spin-bg': "url('/background/bg-overlay.jpg')",
+        'spin-bg': "url('/background/bgs6.jpg')",
         'spin-wheel': "url('/spin/wheel.png')",
         'spin-wheel-bg': "url('/spin/wheelBorder.png')",
         'spin-arrow': "url('/spin/wheelBorder.png')",
