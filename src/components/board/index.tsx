@@ -11,7 +11,7 @@ function Board() {
   return (
     // Bet Board
     <div className="">
-      <div className="flex flex-row justify-evenly sm:ml-0 md:ml-0 lg:ml-0">
+      <div className="flex flex-row justify-evenly sm:ml-0 md:ml-0 lg:ml-0 2xl:-ml-96">
         
         {/* Board 1 */}
 
@@ -40,9 +40,12 @@ function Board() {
             
           </div>
         </div>
+
         {/* profile */}
-        <div className="z-10 -mt-60 -mr-96 sm:-mt-24 sm:mr-10 sm:w-20 sm:h-36 md:-mt-24 md:mr-10 md:w-20 md:h-36 lg:w-24 lg:h-36  lg:mr-10 lg:-mt-24">
-          <Canvas onClick={handleOpen}>
+
+        <div className=" -mt-60 -mr-96 sm:-mt-24 sm:mr-10 sm:w-20 sm:h-36 md:-mt-24 md:mr-10 md:w-20 md:h-36 lg:w-24 lg:h-36  lg:mr-10 lg:-mt-24 2xl:w-36  2xl:h-56 2xl:-ml-60 ">
+          <div>
+          <Canvas onClick={handleOpen} style={{marginTop:"50px"}}>
             <Sparkles size={2} count={500} />
             <ambientLight intensity={4} />
             <Environment preset="sunset" />
@@ -56,6 +59,9 @@ function Board() {
               <Character />
             </Suspense>
           </Canvas>
+
+          </div>
+
         </div>
       </div>
       {/* Profile Models */}

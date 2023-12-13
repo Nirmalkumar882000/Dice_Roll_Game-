@@ -9,7 +9,7 @@ function GameArea() {
   return (
     <>
       <div className="h-64 border-8 rounded-lg shadow-2xl border-sky-500 bg-sky-300 shadow-sky-500/50 sm:w-28 sm:h-24 md:w-32 md:h-28 lg:w-32 lg:h-28">
-        <div className="h-64 sm:h-20 w-80 sm:w-28 md:w-28 md:h-24 lg:w-28 lg:h-24">
+        <div className="h-64 sm:h-20 w-80 sm:-ml-2 sm:w-28 md:w-28 md:h-24 lg:w-28 lg:h-24 2xl:-mt-2">
           <Canvas>
             <ambientLight intensity={2} />
             <OrbitControls
