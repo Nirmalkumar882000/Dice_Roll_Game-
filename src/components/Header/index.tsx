@@ -33,21 +33,21 @@ function Header() {
             </Suspense>
           </Canvas>
         </div>
-        <div className="text-2xl text-white mt-7 -ml-28 sm:text-xs sm:mt-2 sm:-ml-2 md:mt-2 md:-ml-2 md:text-sm  lg:text-sm lg:mt-2 lg:-ml-2 2xl:text-3xl 2xl:-ml-28 2xl:mt-2 ">
+        <div className="text-2xl text-white mt-7 -ml-28 sm:text-xs sm:mt-2 sm:-ml-2 md:mt-2 md:-ml-2 md:text-sm  lg:text-sm lg:mt-2 lg:-ml-2 2xl:text-3xl 2xl:-ml-28 2xl:mt-2">
           10.00
         </div>
       </div>
 
       {/* Titles */}
 
-      <div className="mt-5 text-2xl text-white ml-72 sm:text-lg sm:ml-5 sm:mt-2 md:ml-32  md:mt-2 md:mr-5 lg:ml-24 lg:mt-2 lg:mr-5 2xl:text-4xl 2xl:mt-2 2xl:ml-72 ">
+      <div className="mt-5 text-2xl text-white ml-72 sm:text-lg sm:ml-5 sm:mt-2 md:ml-32  md:mt-2 md:mr-5 lg:ml-24 lg:mt-2 lg:mr-5 2xl:text-4xl 2xl:mt-2 2xl:ml-60 ">
         DiceGame
       </div>
 
           {/* Coins Image */}
 
-      <div className="flex mt-5 sm:mt-2 sm:-ml-14 md:mt-2 md:-ml-14 lg:-ml-10 lg:mt-2 2xl:mt-5 ">
-        <div className="h-16 sm:h-8 md:h-8 lg:h-8 2xl:h-16 2xl:-mt-4">
+      <div className="flex mt-5 sm:mt-2 sm:-ml-14 md:mt-2 md:-ml-14 lg:-ml-14 lg:mt-2 2xl:mt-5 ">
+        <div className="h-16 sm:h-8 md:h-8 lg:h-8 lg:w-8 2xl:w-16 2xl:h-16 2xl:-mt-4 ">
 
 
           <Canvas>
@@ -62,7 +62,7 @@ function Header() {
         {/* balance coins */}
 
         <div className="text-white">
-          <p className="mt-4 text-lg -ml-28 sm:mt-2 sm:text-xs sm:-ml-32 md:-ml-32 md:text-sm md:mt-2 lg:text-sm lg:-ml-1 lg:mt-1 2xl:mt-1 2xl:-ml-28 2xl:text-2xl">
+          <p className="mt-4 text-lg -ml-28 sm:mt-2 sm:text-xs sm:-ml-32 md:-ml-32 md:text-sm md:mt-2 lg:text-sm lg:ml-2 lg:mt-1 2xl:mt-1 2xl:-ml-0 2xl:text-2xl">
             14000000
           </p>
         </div>
@@ -72,7 +72,7 @@ function Header() {
       {/* Setting Images */}
 
 
-      <div className="h-24 mt-1 -mr-72 sm:h-8 sm:w-8 sm:mr-32 sm:mt-2 md:h-10 md:w-10 md:mr-20 md:mt-2 lg:w-10 lg:h-10 lg:mt-2 lg:-mr-10 2xl:h-24 2xl:w-24 2xl:-mr-40 2xl:-mt-2">
+      <div className="h-24 mt-1 -mr-72 sm:h-8 sm:w-8 sm:mr-32 sm:mt-2 md:h-10 md:w-10 md:mr-20 md:mt-2 lg:w-10 lg:h-10 lg:mt-2 lg:-mr-10 2xl:h-24 2xl:w-24 2xl:-mr-20 2xl:-mt-2">
         <Canvas onClick={handleOpen}>
           <OrbitControls
             enableZoom={false}

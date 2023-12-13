@@ -43,8 +43,8 @@ function Board() {
 
         {/* profile */}
 
-        <div className=" -mt-60 -mr-96 sm:-mt-24 sm:mr-10 sm:w-20 sm:h-36 md:-mt-24 md:mr-10 md:w-20 md:h-36 lg:w-24 lg:h-36  lg:mr-10 lg:-mt-24 2xl:w-36  2xl:h-56 2xl:-ml-60 ">
-          <div>
+        <div className=" -mt-60 -mr-96 sm:-mt-36 sm:mr-10 sm:w-20 sm:h-36 md:-mt-36 md:mr-10 md:w-20 md:h-36 lg:w-24 lg:h-36  lg:mr-10 lg:-mt-36 2xl:w-36  2xl:h-60 2xl:-ml-60   ">
+
           <Canvas onClick={handleOpen} style={{marginTop:"50px"}}>
             <Sparkles size={2} count={500} />
             <ambientLight intensity={4} />
@@ -60,8 +60,7 @@ function Board() {
             </Suspense>
           </Canvas>
 
-          </div>
-
+        
         </div>
       </div>
       {/* Profile Models */}
