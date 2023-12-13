@@ -21,6 +21,7 @@ export function Dice1(props) {
     }
   }));
 
+  
   const rerollDice = () => {
     api.velocity.set(-1, 0, 0);
     api.angularVelocity.set(

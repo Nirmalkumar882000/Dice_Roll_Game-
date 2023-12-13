@@ -1,16 +1,15 @@
-import React, { Suspense, useRef } from "react";
+import React, { Suspense, useRef, useState } from "react";
 import { OrbitControls, RoundedBox, Sparkles } from "@react-three/drei";
-import dice from "/dice/dice.png";
 import { Canvas, useFrame } from "@react-three/fiber";
-
 import { Dice1 } from "./Dice1";
 import { Physics, usePlane } from "@react-three/cannon";
 
 function GameArea() {
+  
   return (
     <>
-      <div className="h-64 border-8 rounded-lg shadow-2xl w-96 border-sky-500 bg-sky-300 shadow-sky-500/50">
-        <div className="h-64 w-80 ">
+      <div className="h-5/6 border-8 rounded-lg shadow-2xl  border-sky-500 bg-sky-300 shadow-sky-500/50">
+        <div className="h-5/6 w-80 ">
           <Canvas>
             <ambientLight intensity={2} />
             <OrbitControls
@@ -28,6 +27,9 @@ function GameArea() {
             </Suspense>
           </Canvas>
         </div>
+        
+        {/* Profile Model */}
+        
       </div>
     </>
   );
@@ -51,6 +53,9 @@ function Ground(props) {
     </mesh>
   );
 }
+
+
+
 
 // <Canvas style={{ height: 600, width: 600 }}>
 //       <pointLight position={[5, 5, 5]} />

@@ -1,16 +1,21 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useState } from "react";
 import manual from "/dice/manual.gif";
 import coin from "/dice/coin.png";
 import { Canvas } from "@react-three/fiber";
 import { Instruction } from "./Instruction";
 import { OrbitControls } from "@react-three/drei";
+import Model from "./Model";
+import "./index.css"
 
 function Footer() {
+  const [rules,setRules]=useState(false)
+  const handleClose = () => setRules(false);
+  const handleOpen = () => setRules(true);
+
   return (
     <div className="flex flex-row justify-between">
-      <div className="w-40 h-32 ml-10 -mt-5">
-        {/* <img src={manual} alt="loading..." /> */}
-        <Canvas>
+      <div className="w-40 h-32 ml-10 -mt-5" >
+        <Canvas onClick={handleOpen}>
           <OrbitControls
             enableZoom={false}
             enablePan={false}
@@ -39,8 +44,26 @@ function Footer() {
             </div>
           ))}
       </div>
+      
+      {/* Instructions Modal */}
+
+      {
+      rules && (
+        <>
+        <div className="fixed inset-0 z-50 flex items-center justify-center focus:outline-none backdrop-blur-sm hover:backdrop-blur-lg">
+        <Model handleClose={handleClose}/>
+        </div>
+        </>
+      )
+    }
     </div>
+    
+   
   );
 }
 
 export default Footer;
+
+
+
+

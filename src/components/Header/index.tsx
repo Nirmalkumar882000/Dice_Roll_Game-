@@ -1,15 +1,25 @@
-import React, { Suspense } from 'react'
-import img from "/coins/Coin.png"
-
+import React, { Suspense, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { Environment, OrbitControls, Text, Text3D } from '@react-three/drei'
 import { Settings } from './Settings'
 import { Clockloop } from './Clockloop'
 import { Coin } from './Coin'
+import "./index.css"
+import Model from './Model'
 
 
 
 function Header() {
+
+  const [settings,setSettings]=useState(false)
+  const handleClose = () => setSettings(false);
+  const handleOpen = () => setSettings(true);
+
+
+
+  
+
+
   return (
     <div className='container flex flex-row justify-between ml-80'>
       <div className='flex -ml-36'>
@@ -47,7 +57,7 @@ function Header() {
         </div>
       </div>
       <div className='h-24 mt-1 -mr-72'>
-       <Canvas>
+       <Canvas onClick={handleOpen}>
         <OrbitControls enableZoom={false} enablePan={false} maxPolarAngle={1.5} minPolarAngle={1.5}/>
         <ambientLight intensity={2}/>
         <Suspense>
@@ -55,6 +65,19 @@ function Header() {
         </Suspense>
        </Canvas>
       </div>
+
+      {/* Settings Model */}
+
+      {
+      settings && (
+        <>
+        <div className="fixed inset-0 z-50 flex items-center justify-center focus:outline-none backdrop-blur-sm hover:backdrop-blur-lg">
+        <Model handleClose={handleClose}/>
+        </div>
+        </>
+      )
+    }
+      
     </div>
   )
 }
