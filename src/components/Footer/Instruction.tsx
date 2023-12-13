@@ -14,7 +14,7 @@ export function Instruction(props) {
   })
   
   return (
-    <group ref={group} {...props} dispose={null} scale={7}>
+    <group ref={group} {...props} dispose={null} scale={8}>
       <group name="Sketchfab_Scene">
         <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]} scale={1.678}>
           <group name="30d1689385274226a8acca567e698190fbx" rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
