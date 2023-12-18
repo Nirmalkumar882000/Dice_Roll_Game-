@@ -1,15 +1,16 @@
-import React, { Suspense, useRef, useState } from "react";
+import React, { Suspense, useRef, useState,useEffect } from "react";
 import { OrbitControls, RoundedBox, Sparkles } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Dice1 } from "./Dice1";
 import { Physics, usePlane } from "@react-three/cannon";
+import "./index.css"
 
 function GameArea() {
   
   return (
     <>
       <div className="h-64 border-8 rounded-lg shadow-2xl border-sky-500 bg-sky-300 shadow-sky-500/50 sm:w-28 sm:h-24 md:w-32 md:h-28 lg:w-32 lg:h-28">
-        <div className="h-64 sm:h-20 w-80 sm:-ml-2 sm:w-28 md:w-28 md:h-24 lg:w-28 lg:h-24 2xl:-mt-2">
+        <div className="h-64 sm:h-20 w-80 sm:-ml-2 sm:w-28 md:w-28 md:h-24 lg:w-28 lg:h-24 2xl:-mt-2 ">
           <Canvas>
             <ambientLight intensity={2} />
             <OrbitControls
@@ -21,11 +22,14 @@ function GameArea() {
             <Suspense fallback={null}>
               <Physics>
             <Ground position={[0,-2,-10]}/>
-                <Dice1 position={[1, 0, 0]} />
+                <Dice1 position={[1.5, 0, 0]} />
                 <Dice1 position={[-1, 0, 0]} />
               </Physics>
             </Suspense>
           </Canvas>
+      
+          {/* <Dice  /> */}
+     
         </div>
         
         {/* Profile Model */}
@@ -65,3 +69,46 @@ function Ground(props) {
 //       <OrbitControls />
 //       <Stats />
 //     </Canvas>
+
+
+
+
+
+
+import ReactDice, { ReactDiceRef } from 'react-dice-complete'
+
+const Dice = () => {
+
+  const reactDice = useRef<ReactDiceRef>(null)
+
+  const rollDone = (totalValue: number, values: number[]) => {
+    console.log('individual die values array:', values)
+    console.log('total dice value:', totalValue)
+  }
+
+  useEffect(()=>{
+    rollAll()
+  },[])
+
+  const rollAll = () => {
+    reactDice.current?.rollAll([6,3])
+  }
+
+  return (
+    <ReactDice
+      numDice={2}
+      ref={reactDice}
+      rollDone={rollDone}
+      dieSize={40}
+      margin={20}
+    />
+  )
+
+}
+
+// export default Dice;
+
+
+
+
+// 60145625908

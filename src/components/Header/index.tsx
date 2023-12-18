@@ -15,7 +15,7 @@ function Header() {
   return (
     <div className="container flex flex-row justify-between ml-80 sm:ml-32 md:-ml-10 lg:-ml-12 2xl:-ml-0">
 
-      <div className="flex -ml-36 sm:ml-5 md:ml-7 lg:ml-5 2xl:-ml-40"> 
+      <div className="flex -ml-36 sm:ml-5 md:ml-7 lg:ml-5 2xl:ml-0"> 
 
         <div className="h-32 ml-10 -mt-5 sm:h-14 sm:-mt-3 sm:w-14 sm:-ml-32 md:h-16 md:w-16 md:-mt-3 lg:w-16 lg:h-16 lg:-mt-3 2xl:h-32 2xl:ml-14 2xl:-mt-8 ">
           {/* Clock */}

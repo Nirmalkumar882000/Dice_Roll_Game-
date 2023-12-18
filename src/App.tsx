@@ -1,8 +1,9 @@
 import GameArea from "./components/GameArea";
 import Header from "./components/Header";
-import "./App.css";
+import "./App.css"
 import Board from "./components/board"
 import Footer from "./components/Footer"
+import  { Dices } from "./components/Dice/Dice";
 
 
 
@@ -17,10 +18,14 @@ function App() {
         <div className="flex items-center justify-center mt-20 sm:mt-2 md:mt-3 lg:mt-2 2xl:mt-7">
           <Board/>
         </div>
-        <div className="mt-20 sm:mt-3 md:mt-3 lg:mt-3 2xl:mt-8  ">
+        <div className="mt-20 sm:mt-3 md:mt-3 lg:mt-3 2xl:mt-8 "> 
           <Footer/>
         </div>
-      </div>  
+      </div>   
+     {/* <Dice/>
+     {/* <Dices/> */}
+     
+   
     </>
   );
 }
