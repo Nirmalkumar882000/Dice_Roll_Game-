@@ -33,14 +33,14 @@ function Header() {
             </Suspense>
           </Canvas>
         </div>
-        <div className="text-2xl text-white mt-7 -ml-28 sm:text-xs sm:mt-2 sm:-ml-2 md:mt-2 md:-ml-2 md:text-sm  lg:text-sm lg:mt-2 lg:-ml-2 2xl:text-3xl 2xl:-ml-28 2xl:mt-2">
+        <div className="text-2xl text-white mt-7 -ml-28 sm:text-xs sm:mt-2 sm:-ml-2 md:mt-2 md:-ml-2 md:text-sm lg:text-sm lg:mt-2 lg:-ml-2 2xl:text-3xl 2xl:-ml-28 2xl:mt-2">
           10.00
         </div>
       </div>
 
       {/* Titles */}
 
-      <div className="mt-5 text-2xl text-white ml-72 sm:text-lg sm:ml-5 sm:mt-2 md:ml-32  md:mt-2 md:mr-5 lg:ml-24 lg:mt-2 lg:mr-5 2xl:text-4xl 2xl:mt-2 2xl:ml-60 ">
+      <div className="mt-5 text-2xl text-white ml-72 sm:text-lg sm:ml-5 sm:mt-2 md:ml-32 md:mt-2 md:mr-5 lg:ml-24 lg:mt-2 lg:mr-5 2xl:text-4xl 2xl:mt-2 2xl:ml-60 ">
         DiceGame
       </div>
 

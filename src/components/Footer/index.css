@@ -61,18 +61,67 @@
   }
 
 
-  .modal {
-    width: clamp(50%, 700px, 90%);
-    height: min(50%, 300px);
-  
-    margin: auto;
-    padding: 0 2rem;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+    .modal {
+      width: clamp(60%, 800px, 90%);
+      height: min(100%, 500px);
+    
+      margin: auto;
+      padding: 0 2rem;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+ 
 
   .orange-gradient {
     background: var(--gradient);
   }
+
+
+
+
+  /* Small screens (sm) */
+@media only screen and (max-width: 600px) {
+  .modal {
+    width: 90%;
+    height: 80vh;
+  }
+}
+
+/* Medium screens (md) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  .modal {
+    width: 80%;
+    height: 70vh;
+  
+  }
+}
+
+/* Large screens (lg) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .modal {
+    width: 70%;
+    height: 60vh;
+  }
+}
+
+/* Extra-large screens (xl) */
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+  .modal {
+    width: 60%;
+    height: 50vh;
+  }
+}
+
+/* 2x-large screens (2xl) */
+@media only screen and (min-width: 1201px) {
+  .modal {
+    width: 50%;
+    height: 40vh;
+  }
+}
+
+
+
